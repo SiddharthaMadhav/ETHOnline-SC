@@ -1,0 +1,196 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "productId",
+						"type": "uint256"
+					}
+				],
+				"name": "buyProduct",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fetchBoughtProducts",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "manufacturer",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "vendorAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "price",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct SurebuyMP.Product[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fetchSoldProducts",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "manufacturer",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "vendorAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "price",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct SurebuyMP.Product[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "man",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					}
+				],
+				"name": "sellProduct",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SurebuyMP.sol": "SurebuyMP"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ISurebuy.sol": {
+			"keccak256": "0xba51cc91a5d0631a7afd621ba81141ae61370bfe300bce361f6d5a68b5aa79b3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://428dc48552e8ee45ffd96079de2d85a71db5ffea8e4f706b1c3f0aeb0088af65",
+				"dweb:/ipfs/QmWJtce9jDYtsen5Lx79kGqdVU3ieWFPQ2WH5kvWVdoYWj"
+			]
+		},
+		"contracts/SurebuyMP.sol": {
+			"keccak256": "0xe73275a045f8cdb7c523ae02acc230e6255a1efecdf555da34d9799f8044166b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e9ceae862257d44a51322c4e806e9f5fe4a2f5b541642c672126a1d4ed1d0b21",
+				"dweb:/ipfs/QmRLicnEW4zG1gQjRLLoTU9aEEUhKKrMUbe8annJBQJVxG"
+			]
+		}
+	},
+	"version": 1
+}

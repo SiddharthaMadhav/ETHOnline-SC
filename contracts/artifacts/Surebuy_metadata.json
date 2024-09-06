@@ -1,0 +1,457 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "SureBuy_AlreadyRegistered",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "SureBuy_NotAllowed",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "requestId",
+						"type": "uint256"
+					}
+				],
+				"name": "confirmRequest",
+				"outputs": [
+					{
+						"internalType": "uint64",
+						"name": "",
+						"type": "uint64"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "requestId",
+						"type": "uint256"
+					}
+				],
+				"name": "declineRequest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_ven",
+						"type": "address"
+					}
+				],
+				"name": "getApprovedManufacturers",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_man",
+						"type": "address"
+					}
+				],
+				"name": "getApprovedVendors",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					}
+				],
+				"name": "getEntity",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "pan",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Surebuy.Entity",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "getRequest",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "vendor",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "manufacturer",
+								"type": "address"
+							},
+							{
+								"internalType": "bool",
+								"name": "granted",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Surebuy.Request",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getRequests",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "vendor",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "manufacturer",
+								"type": "address"
+							},
+							{
+								"internalType": "bool",
+								"name": "granted",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Surebuy.Request[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					}
+				],
+				"name": "isAManufacturer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					}
+				],
+				"name": "isAVendor",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_ven",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_man",
+						"type": "address"
+					}
+				],
+				"name": "isAttested",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_pan",
+						"type": "string"
+					}
+				],
+				"name": "registerAsManufacturer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_pan",
+						"type": "string"
+					}
+				],
+				"name": "registerAsVendor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "schemaId",
+				"outputs": [
+					{
+						"internalType": "uint64",
+						"name": "",
+						"type": "uint64"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_man",
+						"type": "address"
+					}
+				],
+				"name": "sendRequest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "instance",
+						"type": "address"
+					}
+				],
+				"name": "setSPInstance",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint64",
+						"name": "schemaId_",
+						"type": "uint64"
+					}
+				],
+				"name": "setSchemaID",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "spInstance",
+				"outputs": [
+					{
+						"internalType": "contract ISP",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Surebuy.sol": "Surebuy"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@ethsign/sign-protocol-evm/src/interfaces/ISP.sol": {
+			"keccak256": "0xd5ddbb7cc6af2ee4c11d6c5dac739fc6254d84e13167bc054eb4477244490756",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://091cf442a93b2b851c1a8cb6faca67f4c55e966e365d7ef5fa0ac0a12b68749c",
+				"dweb:/ipfs/QmfKkHN9W4qC5kCMSERFDNtgAL9SSqidkccS9kdA3tZuXP"
+			]
+		},
+		"@ethsign/sign-protocol-evm/src/interfaces/ISPHook.sol": {
+			"keccak256": "0xa42159d34c4b8fa91507efacad81c14106f466efdc63b81a7d566dc0d2e736f4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://670e3e20324614603c6254bbfd9552c7fca10266170511bca9a2470261e345bf",
+				"dweb:/ipfs/QmZaPzenpEi45FJSpw2MbWLYjiLLPQyCGAk7jiiioA9skY"
+			]
+		},
+		"@ethsign/sign-protocol-evm/src/interfaces/IVersionable.sol": {
+			"keccak256": "0xbcf1955aa8423f4f77a46a988a7cd41a46ae92af42aa4546cfebdc2a92916129",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://82880280231031e328b1072ea63e8c132033f7d5db1d211a4cf6d2fbe2cd024b",
+				"dweb:/ipfs/QmNcYfGmZwxey5D2uXvntf8RkWURfxwZNzAbaa8vyP7MvK"
+			]
+		},
+		"@ethsign/sign-protocol-evm/src/models/Attestation.sol": {
+			"keccak256": "0x8e2a182141d06bfdcce1325d70e8dd307f7d6b3d7b6fafcedc2dbabeb99fa30f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d4e0154225fb7eb51500103c5176921406f5641eafdb33388254986501e0ec1e",
+				"dweb:/ipfs/QmVGMSUJKQMKdjg6j7rAozjuSnUT5Evhe6LQddeya63xUV"
+			]
+		},
+		"@ethsign/sign-protocol-evm/src/models/DataLocation.sol": {
+			"keccak256": "0x14f64929317cae8ae822a0dd2c20315ac141f10fa255cd2b13a0a4962385ec10",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://72b539ad90cbb693e2c8b38972b4b3cdc5973de81dd97ad4cb23982855a60dc6",
+				"dweb:/ipfs/QmQrk3NkVtyjMAfZ4jbTDEGaVppSkBHQg81qyZAGr267iw"
+			]
+		},
+		"@ethsign/sign-protocol-evm/src/models/Schema.sol": {
+			"keccak256": "0xcf3bd964790fdc7f72bacc86380b307e58bf15fa5f7332852d4969fe0db58216",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://88fd41cb27198ee7d756d19fc5a7db721521bb3584828457064ade754babee7b",
+				"dweb:/ipfs/QmbTcusMEAB4zRXgYTYJLNtD6KdkVXkynK9rCwqZGqbaqW"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0xc6a8ff0ea489379b61faa647490411b80102578440ab9d84e9a957cc12164e70",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0ea104e577e63faea3b69c415637e99e755dcbf64c5833d7140c35a714d6d90c",
+				"dweb:/ipfs/Qmau6x4Ns9XdyynRCNNp3RhLqijJjFm7z5fyZazfYFGYdq"
+			]
+		},
+		"contracts/Surebuy.sol": {
+			"keccak256": "0xb562458b42980d088b4c1b2bb16427c958a9602240be2592961c4c4dd5b8fa81",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://26a8a4517b8db7ffe1a8944d54fbca6db9044a7f5158792dc5d38033087f1808",
+				"dweb:/ipfs/QmVgj6Yojq3LUt1pipUcj5QQ5ZMS7fANAH7ZNv1d3AXuB7"
+			]
+		}
+	},
+	"version": 1
+}
