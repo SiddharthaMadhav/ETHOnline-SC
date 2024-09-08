@@ -1,28 +1,7 @@
-REMIX DEFAULT WORKSPACE
+# SureBuy smart contracts
+The project's smart contracts are deployed on the Sepolia testnet and consist of two primary components: SureBuy and SureBuyMP. The SureBuy smart contract serves as a bridge between vendors and manufacturers, enabling them to register on the platform. Vendors can send requests for attestation to manufacturers, who can then accept or decline these requests. Additionally, SureBuy interacts with the Sign Protocol smart contract on Sepolia to facilitate secure attestations. The SureBuyMP contract functions as the marketplace interface, connecting verified vendors with buyers. Only vendors who have received attestation from manufacturers are permitted to sell their products in the marketplace, ensuring that all items available for purchase are legitimate.
 
-Remix default workspace is present when:
-i. Remix loads for the very first time 
-ii. A new workspace is created with 'Default' template
-iii. There are no files existing in the File Explorer
-
-This workspace contains 3 directories:
-
-1. 'contracts': Holds three contracts with increasing levels of complexity.
-2. 'scripts': Contains four typescript files to deploy a contract. It is explained below.
-3. 'tests': Contains one Solidity test file for 'Ballot' contract & one JS test file for 'Storage' contract.
-
-SCRIPTS
-
-The 'scripts' folder has four typescript files which help to deploy the 'Storage' contract using 'web3.js' and 'ethers.js' libraries.
-
-For the deployment of any other contract, just update the contract's name from 'Storage' to the desired contract and provide constructor arguments accordingly 
-in the file `deploy_with_ethers.ts` or  `deploy_with_web3.ts`
-
-In the 'tests' folder there is a script containing Mocha-Chai unit tests for 'Storage' contract.
-
-To run a script, right click on file name in the file explorer and click 'Run'. Remember, Solidity file must already be compiled.
-Output from script will appear in remix terminal.
-
-Please note, require/import is supported in a limited manner for Remix supported modules.
-For now, modules supported by Remix are ethers, web3, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
-For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
+## Links to smart contract
+1. [SureBuy contract](https://sepolia.etherscan.io/address/0xc44743ec4191620132794D1A50642D264c269A1D)
+2. [SureBuy marketplace contract](https://sepolia.etherscan.io/address/0x96b412d49bc204C548575Ee23C255672442CA27F)
+3. [Schema on sepolia](https://testnet-scan.sign.global/schema/onchain_evm_11155111_0x95)
